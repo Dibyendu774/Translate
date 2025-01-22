@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to TranslateNow</title>
+    <link rel="stylesheet" href="{% static 'css/Home.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">TranslateNow</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Instant Language Translation</h1>
+            <p>Translate text between multiple languages instantly and effortlessly.</p>
+            <a href="/text_translate" class="cta-btn">Text Translate</a><a style="margin-left: 70px" href="/image_translate" class="cta-btn">Image translate</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>Our Features</h2>
+        <div class="feature-cards">
+            <div class="feature-card">
+                <h3>Fast Translation</h3>
+                <p>Get accurate translations in seconds.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Multiple Languages</h3>
+                <p>Translate between various languages at your convenience.</p>
+            </div>
+            <div class="feature-card">
+                <h3>User-Friendly</h3>
+                <p>Simple and easy-to-use interface for all users.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 TranslateNow. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

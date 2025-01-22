@@ -1,0 +1,635 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #f4f6f8, #cce7ff);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+    background: linear-gradient(to right, #f4f6f8, #cce7ff);
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Form Styles */
+label {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="file"] {
+    margin-bottom: 20px;
+}
+
+/* Image Container */
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    animation: slideIn 1s ease-out;
+}
+
+.image-container div {
+    width: 48%;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.image-container div:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.image-container div:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+.translated-text-container {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.translated-text {
+    white-space: pre-wrap; /* Ensures line breaks are maintained */
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    word-wrap: break-word;
+}
+
+.original-image-container {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.original-image-container {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.zoomable-image {
+    max-width: 100%;
+    height: auto;
+    transition: transform 1s ease-in-out;
+}
+
+/* Zooming effect */
+.zoom-in {
+    animation: zoomInOut 3s infinite alternate ease-in-out;
+}
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+/* Zoom button styling */
+.zoom-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.zoom-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Voice Button */
+#speakOriginal, #speakTranslated {
+    margin-top: 10px;
+    background-color: #28a745;
+    color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.upload-container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    width: 50%;
+    margin: 50px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.upload-box {
+    display: inline-block;
+    padding: 20px 50px;
+    background: #007bff;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+}
+
+.upload-box:hover {
+    background: #0056b3;
+}
+
+.upload-box input {
+    display: none;
+}
+
+.drop-text {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #555;
+}
+
+.drop-text a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.image-preview {
+    margin-top: 20px;
+}
+
+.image-preview img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.no-image-text {
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.suggested-images img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.suggested-images img:hover {
+    transform: scale(1.1);
+}
+
+.terms-text {
+    font-size: 14px;
+    color: #777;
+    margin-top: 20px;
+}
+
+.terms-text a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Basic styles for the dropdown */
+/* Basic styles for the dropdown */
+/* Basic styles for the select dropdown */
+/* Wrapper for additional animations */
+/* Container for the select element and its label */
+.select-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Styling the label */
+.select-label {
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: inline-block;
+    position: relative;
+    padding-left: 30px; /* Space for icon */
+    transition: all 0.3s ease;
+}
+
+/* Globe icon styling */
+.select-label i {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+/* Wrapper container for the select dropdown */
+.select-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Select dropdown styles */
+#languageSelect {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Icon animation when hovering over the select */
+#languageSelect:hover + .select-label i {
+    transform: translateY(-50%) rotate(360deg);
+}
+
+/* Hover effect on the select box */
+#languageSelect:hover {
+    border-color: #4CAF50; /* Green border on hover */
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.2);
+    transform: scale(1.03); /* Slight zoom-in effect */
+}
+
+/* Focus effect */
+#languageSelect:focus {
+    border-color: #5bc0de; /* Light blue border */
+    box-shadow: 0 4px 15px rgba(91, 192, 222, 0.2);
+    transform: scale(1.05); /* Slight zoom-in effect */
+}
+
+/* Smooth fading effect for the entire wrapper */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation when the select box is focused */
+.select-wrapper:focus-within .select-label {
+    color: #4CAF50;
+    transform: translateY(-5px);
+}
+
+/* Custom arrow styling to make it cleaner */
+#languageSelect::after {
+    content: "▼";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #333;
+}
+
+/* Adding some padding to make the dropdown more interactive */
+.select-wrapper {
+    padding: 20px;
+    background: linear-gradient(to right, #ffffff, #f9f9f9);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Select box open effect (for native dropdown, it's not customizable) */
+#languageSelect:focus + .select-label {
+    color: #5bc0de;
+}
+
+.select-label {
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: inline-block;
+    position: relative;
+    padding-left: 30px; /* Space for icon */
+    transition: all 0.3s ease;
+}
+
+/* Globe icon styling */
+.select-label i {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: rotateAndColorChange 5s infinite; /* Continuous rotation and color change */
+    font-size: 26px;
+    border-radius: 50%; /* Ensures the globe is round */
+    padding: 5px;
+}
+
+/* Continuous rotation and color-changing effect for the globe icon */
+@keyframes rotateAndColorChange {
+    0% {
+        transform: translateY(-50%) rotate(0deg);
+        color: #3498db; /* Blue at the start */
+        background-color: #f1c40f; /* Yellow background */
+    }
+    25% {
+        transform: translateY(-50%) rotate(90deg);
+        color: #e74c3c; /* Red color */
+        background-color: #2ecc71; /* Green background */
+    }
+    50% {
+        transform: translateY(-50%) rotate(180deg);
+        color: #f39c12; /* Yellow color */
+        background-color: #9b59b6; /* Purple background */
+    }
+    75% {
+        transform: translateY(-50%) rotate(270deg);
+        color: #2c3e50; /* Dark blue color */
+        background-color: #1abc9c; /* Teal background */
+    }
+    100% {
+        transform: translateY(-50%) rotate(360deg);
+        color: #3498db; /* Blue color */
+        background-color: #f1c40f; /* Yellow background */
+    }
+}
+#imageUpload {
+    width: 30%; /* Makes the input element take the full width of its container */
+    padding: 20px; /* Adds padding to make the input larger */
+    font-size: 18px; /* Increases the text size */
+    border: 2px solid #ccc; /* Adds a border for visual effect */
+    border-radius: 8px; /* Rounds the corners of the input */
+    background-color: #f4f6f8; /* Light background color */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Optional hover effect for the input */
+#imageUpload:hover {
+    border-color: #3498db;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the select dropdown */
+#languageSelect {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #333;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    appearance: none; /* Removes default styling in some browsers */
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+/* Hover effect for color change */
+#languageSelect:hover {
+    border-color: #3498db; /* Blue border on hover */
+    background-color: #f0f8ff; /* Light blue background on hover */
+    transform: scale(1.05); /* Slightly enlarges the dropdown on hover */
+}
+
+/* Focus effect for when the dropdown is clicked */
+#languageSelect:focus {
+    border-color: #5bc0de; /* Light blue border on focus */
+    box-shadow: 0 4px 15px rgba(91, 192, 222, 0.2); /* Soft shadow */
+    transform: scale(1.05);
+}
+
+/* Style the options inside the dropdown */
+#languageSelect option {
+    background-color: #fff; /* White background for options */
+    padding: 10px; /* Adds padding for better readability */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect on options */
+#languageSelect option:hover {
+    background-color: #3498db; /* Blue background when hovering over options */
+    color: white; /* White text when hovering over options */
+}
+
+/* Custom arrow for select dropdown */
+#languageSelect::after {
+    content: "▼"; /* Custom arrow */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #888;
+    pointer-events: none; /* Prevents interaction with the arrow */
+}
+
+/* Animated effect when selecting an option */
+@keyframes colorChange {
+    0% {
+        background-color: #3498db; /* Start with blue */
+        color: white;
+    }
+    50% {
+        background-color: #2ecc71; /* Transition to green */
+        color: black;
+    }
+    100% {
+        background-color: #3498db; /* Return to blue */
+        color: white;
+    }
+}
+
+/* Add a color change animation to the select element */
+#languageSelect:focus {
+    animation: colorChange 2s infinite; /* Infinite color change effect */
+}
+.DEP {
+    width: 30%; /* Makes the input element take the full width of its container */
+    padding: 20px; /* Adds padding to make the input larger */
+    font-size: 18px; /* Increases the text size */
+    border: 2px solid #ccc; /* Adds a border for visual effect */
+    border-radius: 8px; /* Rounds the corners of the input */
+    background-color: #f4f6f8; /* Light background color */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Optional hover effect for the input */
+.DEP:hover {
+    border-color: #3498db;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 1024px) {
+    .container {
+        padding: 30px;
+    }
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .image-container div {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    .upload-container {
+        width: 80%;
+    }
+    .upload-box {
+        font-size: 18px;
+        padding: 15px 30px;
+    }
+    .select-wrapper {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .upload-container {
+        width: 90%;
+        padding: 20px;
+    }
+    .upload-box {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+    #imageUpload {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    .image-container {
+        flex-direction: column;
+    }
+    .upload-container {
+        width: 100%;
+        padding: 15px;
+    }
+    .upload-box {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+    .select-wrapper {
+        width: 100%;
+    }
+}
